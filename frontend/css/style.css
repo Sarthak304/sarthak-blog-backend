@@ -1,0 +1,191 @@
+/* ===========================
+   THEME VARIABLES
+=========================== */
+
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #000;
+  --card-bg: #fff;
+  --header-bg: #1e90ff;
+  --header-text: #fff;
+  --code-bg: #1e1e1e;
+  --code-text: #f8f8f2;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e6e6e6;
+  --card-bg: #1e1e1e;
+  --header-bg: #000;
+  --header-text: #e6e6e6;
+  --code-bg: #2d2d2d;
+  --code-text: #e3e3e3;
+}
+
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #fff;
+  color: #1e90ff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dark-mode .theme-btn {
+  background: #333;
+  color: #fff;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* ===========================
+   BLOG LIST / HOMEPAGE
+=========================== */
+
+.blog-card {
+  background: var(--card-bg);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 {
+  margin: 0;
+}
+
+.blog-card a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+/* ===========================
+   BLOG PAGE
+=========================== */
+
+.blog-container {
+  background: var(--card-bg);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-container h2 {
+  margin-top: 0;
+}
+
+.blog-content {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ===========================
+   LOGIN + ADMIN
+=========================== */
+
+.login-container,
+.admin-container {
+  background: var(--card-bg);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-container input,
+.admin-container input,
+.admin-container textarea,
+.admin-container select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-container button,
+.admin-container button {
+  width: 100%;
+  padding: 12px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* ===========================
+   CODE BLOCKS
+=========================== */
+
+.code-container {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #0c6cd4;
+}
+
+pre.code-block {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #444;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre.code-block code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  display: block;
+}

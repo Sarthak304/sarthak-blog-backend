@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <a href="index.html" style="color:white;">← Back to Home</a>
+  </header>
+
+  <main>
+    <div class="admin-container">
+      <h2>Create New Blog</h2>
+
+      <input type="text" id="title" placeholder="Blog Title">
+
+      <textarea id="content" rows="8" placeholder="Blog content here..."></textarea>
+
+      <input type="text" id="demoUrl" placeholder="YouTube Demo Embed URL (optional)">
+
+      <select id="category">
+        <option value="Apex">Apex</option>
+        <option value="LWC">LWC</option>
+        <option value="SOQL">SOQL</option>
+        <option value="Flow">Flow</option>
+        <option value="CMDT">CMDT</option>
+        <option value="Scenario">Scenario</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <input type="text" id="tags" placeholder="tags (comma separted)">
+      <button id="createBtn">Publish Blog</button>
+
+      <p id="msg"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Sarthak Singhal</p>
+  </footer>
+
+  <script src="js/admin.js"></script>
+</body>
+
+</html>
