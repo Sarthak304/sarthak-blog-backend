@@ -2,50 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Admin Dashboard</h1>
-    <a href="index.html" style="color:white;">← Back to Home</a>
-  </header>
+    <header class="main-header">
+        <div class="header-content container">
+            <h1 class="logo">Admin Dashboard</h1>
 
-  <main>
-    <div class="admin-container">
-      <h2>Create New Blog</h2>
+            <nav class="nav-links">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home </a>
+            </nav>
+            <button id="logoutBtn" class="theme-btn">Logout</button>
+        </div>
+    </header>
 
-      <input type="text" id="title" placeholder="Blog Title">
+    <main class="container">
+        <div class="admin-container">
+            <h2>Create New Blog Post</h2>
 
-      <textarea id="content" rows="8" placeholder="Blog content here..."></textarea>
+            <input type="text" id="title" placeholder="Blog Title">
 
-      <input type="text" id="demoUrl" placeholder="YouTube Demo Embed URL (optional)">
+            <textarea id="content" rows="8" placeholder="Blog content here (use ``` for code blocks)..."></textarea>
 
-      <select id="category">
-        <option value="Apex">Apex</option>
-        <option value="LWC">LWC</option>
-        <option value="SOQL">SOQL</option>
-        <option value="Flow">Flow</option>
-        <option value="CMDT">CMDT</option>
-        <option value="Scenario">Scenario</option>
-        <option value="Other">Other</option>
-      </select>
+            <input type="text" id="demoUrl" placeholder="YouTube Demo Embed URL (optional)">
 
-      <input type="text" id="tags" placeholder="tags (comma separted)">
-      <button id="createBtn">Publish Blog</button>
+            <select id="category">
+                <option value="Apex">Apex</option>
+                <option value="LWC">LWC</option>
+                <option value="SOQL">SOQL</option>
+                <option value="Flow">Flow</option>
+                <option value="CMDT">CMDT</option>
+                <option value="Scenario">Scenario</option>
+                <option value="Other">Other</option>
+            </select>
 
-      <p id="msg"></p>
-    </div>
-  </main>
+            <input type="text" id="tags" placeholder="Tags (comma separated)">
+            <button id="createBtn">Publish Blog</button>
 
-  <footer>
-    <p>© 2025 Sarthak Singhal</p>
-  </footer>
+            <p id="msg"></p>
+        </div>
+    </main>
 
-  <script src="js/admin.js"></script>
+    <footer class="main-footer">
+        <p>© 2025 Sarthak Singhal</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+    <script>
+        // Simple logout handler
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            window.location.href = 'admin-login.html';
+        });
+    </script>
 </body>
 
 </html>

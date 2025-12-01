@@ -3,75 +3,90 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Salesforce LWC, Apex, SOQL, Flow, CMDT, and real project tutorials by Sarthak Singhal.">
+    <meta name="keywords" content="Salesforce, LWC, Apex, SOQL, Flow, CMDT, Metadata, Tutorials, Developer Guide">
+    <meta name="author" content="Sarthak Singhal">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Sarthak's Salesforce Blog",
+            "url": "https://your-domain.com",
+            "description": "Salesforce blogs on Apex, LWC, SOQL, Flow, CMDT, and real-world scenarios.",
+            "author": {
+                "@type": "Person",
+                "name": "Sarthak Singhal"
+            }
+        }
+    </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- SEO Tags -->
-  <meta name="description"
-    content="Salesforce LWC, Apex, SOQL, Flow, CMDT, and real project tutorials by Sarthak Singhal.">
-  <meta name="keywords" content="Salesforce, LWC, Apex, SOQL, Flow, CMDT, Metadata, Tutorials, Developer Guide">
-  <meta name="author" content="Sarthak Singhal">
-  <meta name="robots" content="index, follow">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Sarthak's Salesforce Blog",
-  "url": "https://your-domain.com",
-  "description": "Salesforce blogs on Apex, LWC, SOQL, Flow, CMDT, and real-world scenarios.",
-  "author": {
-    "@type": "Person",
-    "name": "Sarthak Singhal"
-  }
-}
-</script>
-
-  <title>Sarthak Blog</title>
-
-  <link rel="stylesheet" href="css/style.css" />
+    <title>Sarthak Blog</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-
 
 <body>
 
-  <header>
+    <header id="pageHeader" class="main-header hidden">
+        <div class="header-content container">
+            <h1 class="logo" style="cursor: pointer;">Sarthak's <span class="accent">Dev Blog</span></h1>
 
-    <h1>Sarthak's Salesforce Dev Blog and Admin Blogs</h1>
-    <p>Learn Salesforce | LWC | Apex | SOQL | Full-Stack</p>
-  </header>
+            <nav class="nav-links">
+                <a href="#">LWC</a>
+                <a href="#">Apex</a>
+                <a href="#">SOQL</a>
+                <a href="#">Full-Stack</a>
+            </nav>
 
-  <main>
+            <button class="theme-btn dark-mode-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i> 🌙 Dark
+            </button>
+        </div>
+    </header>
 
-    <h2>Latest Blogs</h2>
-    <div class="filters">
-      <select id="filterCategory">
-        <option value="">All Categories</option>
-        <option value="Apex">Apex</option>
-        <option value="LWC">LWC</option>
-        <option value="SOQL">SOQL</option>
-        <option value="Flow">Flow</option>
-        <option value="CMDT">CMDT</option>
-        <option value="Scenario">Scenario</option>
-        <option value="Other">Other</option>
-      </select>
+    <main class="container">
 
-      <input type="text" id="searchInput" placeholder="Search title or tag...">
-    </div>
+        <section class="controls-section">
+            <h2 class="section-title">Latest Blogs</h2>
 
-    <div id="blog-list" class="blog-list">
+            <div class="controls-bar">
+                
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search title or tag...">
+                </div>
 
-      <!-- Blogs will be inserted here by JS -->
+                <select id="filterCategory" class="hidden-select">
+                    <option value="">All Categories</option>
+                    <option value="Apex">Apex</option>
+                    <option value="LWC">LWC</option>
+                    <option value="SOQL">SOQL</option>
+                    <option value="Flow">Flow</option>
+                    <option value="CMDT">CMDT</option>
+                    <option value="Scenario">Scenario</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+            </div>
+        </section>
 
-    </div>
+        <div id="loader" class="loader-container hidden"></div>
 
-  </main>
+        <div id="blog-list" class="blog-grid">
+            </div>
 
-  <footer>
+    </main>
 
-    <p>© 2025 Sarthak Singhal. All rights reserved.</p>
+    <footer class="main-footer">
+        <p>© 2025 Sarthak Singhal. All rights reserved.</p>
+    </footer>
 
-  </footer>
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
